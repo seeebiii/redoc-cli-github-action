@@ -1,0 +1,20 @@
+on: [push]
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    name: Test job for redoc-cli GitHub Action
+    steps:
+      # To use this repository's private action, you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: redoc-cli test
+        uses: ./ # Uses an action in the root directory
+        with:
+          args: 'bundle test/petstore.yml -o petstore.html'
+
+      - name: check result
+        run: |
+          ls -al
+          test -f petstore.html || (echo "Missing petstore.html from previous step." && exit 1)

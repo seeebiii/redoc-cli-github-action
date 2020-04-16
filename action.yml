@@ -1,0 +1,16 @@
+name: 'redoc-cli-github-action'
+description: 'Lets you use redoc-cli for generating REST API docs of your OpenAPI documents.'
+author: 'Sebastian Hesse <info@sebastianhesse.de>'
+branding:
+  icon: 'book'
+  color: 'green'
+inputs:
+  args:
+    description: 'The arguments to pass over to redoc-cli'
+    required: false
+    default: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+  - ${{ inputs.args }}
