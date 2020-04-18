@@ -8,7 +8,7 @@ on:
 jobs:
   test_job:
     runs-on: ubuntu-latest
-    name: Test job for redoc-cli GitHub Action
+    name: Testing private usage
     steps:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
@@ -26,12 +26,12 @@ jobs:
 
   test_job_2:
     runs-on: ubuntu-latest
-    name: Test job for redoc-cli GitHub Action
+    name: Testing public name
     steps:
-      # To use this repository's private action, you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
 
+      # use the public name of the action
       - name: redoc-cli test
         uses: seeebiii/redoc-cli-github-action@v5
         with:
