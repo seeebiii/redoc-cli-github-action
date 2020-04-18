@@ -6,6 +6,6 @@ COPY LICENSE README.md /
 
 COPY generate-docs.sh /generate-docs.sh
 
-RUN dos2unix /entrypoint.sh && apk del dos2unix && rm -rf /var/lib/apt/lists/*
+RUN dos2unix /generate-docs.sh && apk del dos2unix && rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["./generate-docs.sh"]
