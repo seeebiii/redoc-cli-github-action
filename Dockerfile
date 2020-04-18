@@ -2,6 +2,6 @@ FROM shesse/redoc-cli:1.0.0
 
 COPY LICENSE README.md /
 
-COPY entrypoint.sh /entrypoint.sh
+COPY generate-docs.sh /
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["./generate-docs.sh"]
