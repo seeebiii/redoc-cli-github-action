@@ -32,7 +32,7 @@ jobs:
 
       # then use redoc-cli-github-action to generate your HTML bundle
       - name: redoc-cli test
-        uses: seeebiii/redoc-cli-github-action@v9
+        uses: seeebiii/redoc-cli-github-action@v10
         with:
           args: 'bundle test/petstore.yml'
 ```
@@ -44,7 +44,7 @@ Alternatively you can point it to a file under a certain URL.
 
 ```yaml
 - name: redoc-cli test
-  uses: seeebiii/redoc-cli-github-action@v9
+  uses: seeebiii/redoc-cli-github-action@v10
   with:
     args: 'bundle https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml'
 ```
@@ -53,7 +53,7 @@ If you need to specify a custom name and destination for the output file, use th
 
 ```yaml
 - name: redoc-cli test
-  uses: seeebiii/redoc-cli-github-action@v9
+  uses: seeebiii/redoc-cli-github-action@v10
   with:
     args: 'bundle test/petstore.yml -o petstore.html'
 ```

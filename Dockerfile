@@ -1,4 +1,4 @@
-FROM shesse/redoc-cli:1.0.0
+FROM shesse/redoc-cli:1.0.1
 
 COPY LICENSE README.md /
 
